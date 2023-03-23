@@ -5,20 +5,20 @@
 class Askgpt < Formula
   desc ""
   homepage "https://github.com/sariserhat/homebrew-tools"
-  version "1.2.4"
+  version "1.2.5"
 
   on_macos do
-    if Hardware::CPU.arm?
-      url "https://github.com/serhhatsari/askgpt/releases/download/v1.2.4/askgpt_Darwin_arm64.tar.gz"
-      sha256 "a7611ae50bd9e55fde9e458a482ae5185ef8c1116984b35d2164b510619ea922"
+    if Hardware::CPU.intel?
+      url "https://github.com/serhhatsari/askgpt/releases/download/v1.2.5/askgpt_Darwin_x86_64.tar.gz"
+      sha256 "ce3445bc0ddf282a8eb3099158071ed47c56156e645068a1b50b601f4bfd6792"
 
       def install
         bin.install "askgpt"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/serhhatsari/askgpt/releases/download/v1.2.4/askgpt_Darwin_x86_64.tar.gz"
-      sha256 "0af42beb89d77e54f7b79d02aa0ccd69f42deccefe1397e993120d828b205e7b"
+    if Hardware::CPU.arm?
+      url "https://github.com/serhhatsari/askgpt/releases/download/v1.2.5/askgpt_Darwin_arm64.tar.gz"
+      sha256 "47227c89ef282234b59f6cf774fcb7facef1679a97e06ecf28f130cd77fa2424"
 
       def install
         bin.install "askgpt"
@@ -28,16 +28,16 @@ class Askgpt < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/serhhatsari/askgpt/releases/download/v1.2.4/askgpt_Linux_arm64.tar.gz"
-      sha256 "522d20b6eddf9ab7aa881854a0f975b692063ca6bcd4b7544d6adb22dbee050b"
+      url "https://github.com/serhhatsari/askgpt/releases/download/v1.2.5/askgpt_Linux_arm64.tar.gz"
+      sha256 "633a31c7bf09b689643f3007607215e32b7136cac17d5dcfec92c7cf9ed1214f"
 
       def install
         bin.install "askgpt"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/serhhatsari/askgpt/releases/download/v1.2.4/askgpt_Linux_x86_64.tar.gz"
-      sha256 "01d1772180a858cdc2048ef47a254f85e6756f68c9b0a63b22c3200eb356695e"
+      url "https://github.com/serhhatsari/askgpt/releases/download/v1.2.5/askgpt_Linux_x86_64.tar.gz"
+      sha256 "b36cc393969cdad58a97b99fe71dba79fda14926103553b9dfcc67d3d051b2db"
 
       def install
         bin.install "askgpt"
