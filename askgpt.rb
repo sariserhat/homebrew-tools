@@ -5,20 +5,20 @@
 class Askgpt < Formula
   desc ""
   homepage "https://github.com/sariserhat/homebrew-tools"
-  version "1.2.5"
+  version "1.3.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/serhhatsari/askgpt/releases/download/v1.2.5/askgpt_Darwin_x86_64.tar.gz"
-      sha256 "ce3445bc0ddf282a8eb3099158071ed47c56156e645068a1b50b601f4bfd6792"
+      url "https://github.com/serhhatsari/askgpt/releases/download/v1.3.0/askgpt_Darwin_x86_64.tar.gz"
+      sha256 "c8d4103b5dd1584c9f0cbfa3753fada8159cd8bc88fe5f70973138a93516d833"
 
       def install
         bin.install "askgpt"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/serhhatsari/askgpt/releases/download/v1.2.5/askgpt_Darwin_arm64.tar.gz"
-      sha256 "47227c89ef282234b59f6cf774fcb7facef1679a97e06ecf28f130cd77fa2424"
+      url "https://github.com/serhhatsari/askgpt/releases/download/v1.3.0/askgpt_Darwin_arm64.tar.gz"
+      sha256 "e327de59a7976f3b7c8394d8499efda1eb879c86d034fa48febd214bdab8575c"
 
       def install
         bin.install "askgpt"
@@ -28,16 +28,16 @@ class Askgpt < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/serhhatsari/askgpt/releases/download/v1.2.5/askgpt_Linux_arm64.tar.gz"
-      sha256 "633a31c7bf09b689643f3007607215e32b7136cac17d5dcfec92c7cf9ed1214f"
+      url "https://github.com/serhhatsari/askgpt/releases/download/v1.3.0/askgpt_Linux_arm64.tar.gz"
+      sha256 "267f4ea8fc05305903b4ae85ca84358c31ba8f7c50231db4fe5c712da6024bc1"
 
       def install
         bin.install "askgpt"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/serhhatsari/askgpt/releases/download/v1.2.5/askgpt_Linux_x86_64.tar.gz"
-      sha256 "b36cc393969cdad58a97b99fe71dba79fda14926103553b9dfcc67d3d051b2db"
+      url "https://github.com/serhhatsari/askgpt/releases/download/v1.3.0/askgpt_Linux_x86_64.tar.gz"
+      sha256 "a1f8606a26394e9fdf313a4fdb3c2c88d3c3548f62a752ab19c06cb1f4dde591"
 
       def install
         bin.install "askgpt"
